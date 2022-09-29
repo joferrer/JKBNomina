@@ -3,7 +3,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthRouter } from '../auth/routes/AuthRouter';
 
 import { useCheckAuth } from '../hooks';
-import { UfpsformRouters } from '../ufpsforms/routers/UfpsformRouters';
+import { JKBNominaRouters } from '../jkb/routers/JKBNominaRouters';
+
 
 import { CheckingAuth } from '../ui';
 
@@ -22,7 +23,7 @@ export const AppRouter = () => {
 
         {
           status === 'authenticated' ? 
-          <Route path="/*" element={<UfpsformRouters/>} />
+          <Route path="/*" element={<JKBNominaRouters/>} />
           :<Route path="/auth/*" element={<AuthRouter/>} />
         }
 

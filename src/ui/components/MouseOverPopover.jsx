@@ -2,11 +2,11 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 
-export const MouseOverPopover= ({children})=> {
+export const MouseOverPopover= ({children, text, navOpen})=> {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+    if(!navOpen) setAnchorEl(event.currentTarget);
   };
 
   const handlePopoverClose = () => {
@@ -44,6 +44,7 @@ export const MouseOverPopover= ({children})=> {
         disableRestoreFocus
       >
         {children}
+        {text}
       </Popover>
     </div>
   );

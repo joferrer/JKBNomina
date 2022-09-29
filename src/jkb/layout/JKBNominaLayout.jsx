@@ -1,6 +1,6 @@
 import { SideBar } from "../../ui"
 
-export const UfpsFormsLayout = ({children}) => {
+export const JKBNominaLayout = ({children}) => {
   return (
         <SideBar>
             {children}

@@ -5,12 +5,12 @@ import { MouseOverPopover } from './MouseOverPopover';
 
 const iconsList = [  <Feed color='primary' />, <CheckBox color='primary'/> ,<MoveToInbox color='primary' />, <AddTask color='primary'/>];
 
-export const SideBarItemList = () => {
+export const SideBarItemList = ({open}) => {
   return (
     <List >
-          {['Encuestas vigentes', 'Encuestas finalizadas', 'Cargar Personal', 'Crear Encuesta'].map((text, index) => (
+          {['Empleados', 'Nómina', 'Metricas', 'Crear Encuesta'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-                <MouseOverPopover>
+                <MouseOverPopover text={text} navOpen={open}>
                 <ListItemButton
                 sx={{
                   minHeight: 48,

@@ -100,7 +100,7 @@ export const  SideBar=({children})=> {
       <CssBaseline />
 
       <NavBar 
-        title='Ufps Forms' 
+        title='JKB Nómina' 
         handleDrawerOpen={handleDrawerOpen} 
         drawerwidth={drawerWidth}
         open={open}
@@ -119,7 +119,7 @@ export const  SideBar=({children})=> {
         {/**
          * Lista de items que se muestran en la SideBar
          */}
-        <SideBarItemList/>
+        <SideBarItemList open={open}/>
 
         <Divider />
         
